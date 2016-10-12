@@ -9,10 +9,12 @@ require_relative 'order'
 
 
 @items = []
-@items << AntiqueItem.new({:price => 101, :weight => 100, :name => "vase"})
+@items << AntiqueItem.new("car", {:price => 101, :weight => 100})
 @items << VirtualItem.new({:price => 101, :weight => 100, :name => "car"})
 @items << RealItem.new({:price => 101, :weight => 100, :name => "kettle"})
 @items << RealItem.new({:price => 101, :weight => 100, :name => "dishwasher"})
+
+@items.each { |i| puts i.name}
 
 cart = Cart.new("dmitry")
 cart.add_item RealItem.new({:price => 101, :weight => 100, :name => "car"})
@@ -21,6 +23,40 @@ cart.add_item RealItem.new({:price => 171, :weight => 100, :name => "kettle"})
 
 p cart.all_cars
 p cart.all_kettles
+
+
+
+# method = "all_cars"
+# p cart.send(method)
+#
+#
+# @items[0].send(:price)
+# @items[0].price
+#
+# puts @items[0].send(:tax)
+# puts @items[0].tax
+
+
+# puts cart.kind_of?(Cart)
+# puts @items[0].kind_of?(AntiqueItem)
+# puts @items[0].kind_of?(Item)
+#
+# puts @items[0].class == AntiqueItem
+# puts @items[0].class == Item
+#
+# puts @items[0].respond_to?(:info)
+# puts @items[0].respond_to?(:important_info)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
