@@ -1,7 +1,20 @@
 require_relative 'store_application'
 
-puts StoreApplication.new == StoreApplication.new
-p StoreApplication.new
+StoreApplication.config do |app|
+
+  app.name        = "My Store"
+  app.environment = :production
+
+  app.admin do |admin|
+    admin.email "admin@mystore.com"
+    admin.login "admin"
+    admin.send_info_emails_on :mondays
+  end
+
+end
+
+p StoreApplication.environment
+
 
 @items = []
 @items << AntiqueItem.new("car", {:price => 101, :weight => 100})
