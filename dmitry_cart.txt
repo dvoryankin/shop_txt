@@ -1,3 +1,4 @@
 car:108.05:100
-kettle:115.4:100
-dishwasher:115.4:100
+car:115.4:100
+kettle:122.75:100
+dishwasher:122.75:100
