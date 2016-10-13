@@ -1,6 +1,6 @@
 class Order
 
-  attr_reader :items, :placed_at
+  attr_reader :items, :placed_at, :time_spent_on_sending_email
 
   include ItemContainer
 
@@ -29,6 +29,8 @@ class Order
       puts "."
       sleep(1)
     end
+    sent_email_at = Time.now
+    @time_spent_on_sending_email = sent_email_at - @placed_at
 
   end
 
