@@ -6,6 +6,7 @@ class StoreApplication
       unless @instance
         yield(self)
         puts "loading files..."
+        require 'pony'
         require_relative 'string'
         require_relative 'item_container'
         require_relative 'item'

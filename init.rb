@@ -5,22 +5,16 @@ StoreApplication.config do |app|
   app.environment = :production
 
   app.admin do |admin|
-    admin.email = "admin@mystore.com"
+    admin.email = "dvoryankindm@gmail.com"
     admin.login = "admin"
     admin.send_info_emails_on :mondays
   end
 
 end
 
-p StoreApplication.environment
-p StoreApplication.name
-p StoreApplication::Admin.email
-p StoreApplication::Admin.login
-
 
 @items = []
 @items << AntiqueItem.new("car", {:price => 101, :weight => 100})
-@items << VirtualItem.new({:price => 101, :weight => 100, :name => "car"})
 @items << RealItem.new({:price => 101, :weight => 100, :name => "kettle"})
 @items << RealItem.new({:price => 101, :weight => 100, :name => "dishwasher"})
 
@@ -30,6 +24,13 @@ cart = Cart.new("dmitry")
 cart.add_item RealItem.new({:price => 101, :weight => 100, :name => "car"})
 cart.add_item RealItem.new({:price => 151, :weight => 100, :name => "car"})
 cart.add_item RealItem.new({:price => 171, :weight => 100, :name => "kettle"})
+
+order = Order.new
+@items.each { |i| order.add_item(i) }
+order.place
+
+
+
 
 p cart.all_cars
 p cart.all_kettles
