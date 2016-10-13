@@ -12,14 +12,14 @@ class Order
 
   def place
     Pony.mail(:to => StoreApplication::Admin.email,
-              :from => "My Store <pchellovod@gmail.com>",
+              :from => "My Store <skotobaza74@ya.ru>",
               :via => :smtp, :via_options => {
-                address:     'smtp.gmail.com',
+                address:     'smtp.yandex.ru',
                 port:        '587',
-                user_name:   'pchellovod@gmail.com',
-                password:    'Rfdfkthbz1234',
+                user_name:   'skotobaza74@ya.ru',
+                password:    '123',
                 authentication: :plain,
-                domain:       "mail.google.com"},
+                domain:       "mail.yandex.ru"},
               subject: "New order has been placed",
               body: "Please check back you admin page to see it!")
   end

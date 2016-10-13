@@ -5,7 +5,7 @@ StoreApplication.config do |app|
   app.environment = :production
 
   app.admin do |admin|
-    admin.email = "dvoryankindm@gmail.com"
+    admin.email = "skotobaza74@ya.ru"
     admin.login = "admin"
     admin.send_info_emails_on :mondays
   end
