@@ -1,4 +1,4 @@
-class RealItem < Item
+class RealItem < Item2
 
   attr_reader :weight
 

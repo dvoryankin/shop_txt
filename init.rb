@@ -63,10 +63,10 @@ p cart.all_kettles
 
 # puts cart.kind_of?(Cart)
 # puts @items[0].kind_of?(AntiqueItem)
-# puts @items[0].kind_of?(Item)
+# puts @items[0].kind_of?(Item2)
 #
 # puts @items[0].class == AntiqueItem
-# puts @items[0].class == Item
+# puts @items[0].class == Item2
 #
 # puts @items[0].respond_to?(:info)
 # puts @items[0].respond_to?(:important_info)
@@ -120,7 +120,7 @@ p cart.all_kettles
 # end
 
 
-# puts Item.discount.round 3
+# puts Item2.discount.round 3
 # puts '----'
 # puts item1.price
 # puts item1.real_price
@@ -136,8 +136,8 @@ p cart.all_kettles
 
 
 # cart = Cart.new
-# cart.add_item(Item.new)
-# cart.add_item(Item.new)
+# cart.add_item(Item2.new)
+# cart.add_item(Item2.new)
 # cart.validate
 #
 # p cart.items

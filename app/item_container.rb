@@ -30,7 +30,7 @@ module ItemContainer
     end
 
     def validate
-      @items.each { |i| puts "Item has no price" if i.price.nil? }
+      @items.each { |i| puts "Item2 has no price" if i.price.nil? }
     end
 
     def delete_invalid_items
