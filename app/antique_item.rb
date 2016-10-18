@@ -1,3 +1,3 @@
-class AntiqueItem < Item2
-
-end
+# class AntiqueItem < Item2
+#
+# end
