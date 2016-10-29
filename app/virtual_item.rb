@@ -1,3 +1,3 @@
-# class VirtualItem < Item2
-#
-# end
+class VirtualItem < Item
+
+end
