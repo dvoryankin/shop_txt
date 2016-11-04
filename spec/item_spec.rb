@@ -8,4 +8,9 @@ describe Item do
     item.price.should == 212
   end
 
+  it "returns info about an object" do
+    item = Item.new("kettle", price: 200)
+    item.to_s.should == "kettle:232"
+  end
+
 end
